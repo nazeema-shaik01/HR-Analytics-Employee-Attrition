@@ -15,16 +15,6 @@ LIMIT 10;
 ALTER TABLE employees_raw
 RENAME COLUMN `ï»¿Age` TO Age;
 
-
-SELECT COUNT(*) AS missing_employee_numbers
-FROM employees_raw
-WHERE EmployeeNumber IS NULL;
-
-SELECT EmployeeNumber, COUNT(*) AS duplicate_records
-FROM employees_raw
-GROUP BY EmployeeNumber
-HAVING COUNT(*) > 1; 
-
 SELECT COUNT(*) AS missing_job_role
 FROM employees_raw
 WHERE JobRole IS NULL;
