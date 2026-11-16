@@ -1,59 +1,21 @@
-CREATE TABLE employees AS
-SELECT
-    Age,
-    Attrition,
-    BusinessTravel,
-    DailyRate,
-    Department,
-    DistanceFromHome,
-    Education,
-    EducationField,
-    EnvironmentSatisfaction,
-    Gender,
-    HourlyRate,
-    JobInvolvement,
-    JobLevel,
-    JobRole,
-    JobSatisfaction,
-    MaritalStatus,
-    MonthlyIncome,
-    MonthlyRate,
-    NumCompaniesWorked,
-    EmployeeNumber,
-    OverTime,
-    PercentSalaryHike,
-    PerformanceRating,
-    RelationshipSatisfaction,
-    StockOptionLevel,
-    TotalWorkingYears,
-    TrainingTimesLastYear,
-    WorkLifeBalance,
-    YearsAtCompany,
-    YearsInCurrentRole,
-    YearsSinceLastPromotion,
-    YearsWithCurrManager
-FROM employees_raw;
+-- Check table structure
+DESCRIBE employees;
 
-SELECT * FROM employees; 
+-- View sample employee records
+SELECT *
+FROM employees
+LIMIT 10;
 
+-- Check total number of records
 SELECT COUNT(*) AS total_records
 FROM employees;
 
-ALTER TABLE employees
-ADD PRIMARY KEY (EmployeeNumber);
-
-DESCRIBE employees;
-
-SELECT * FROM employees; 
-
-SELECT COUNT(*)
-FROM employees; 
-
-SELECT COUNT(*)
+-- Check employees who left
+SELECT COUNT(*) AS employees_left
 FROM employees
-WHERE Attrition = 'Yes'; 
+WHERE Attrition = 'Yes';
 
-SELECT COUNT(*)
+-- Check employees who stayed
+SELECT COUNT(*) AS employees_stayed
 FROM employees
-WHERE Attrition = 'No'; 
-
+WHERE Attrition = 'No';
