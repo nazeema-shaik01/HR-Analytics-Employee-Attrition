@@ -84,3 +84,22 @@ SELECT
     SUM(CASE WHEN YearsSinceLastPromotion IS NULL THEN 1 ELSE 0 END) AS missing_YearsSinceLastPromotion,
     SUM(CASE WHEN YearsWithCurrManager IS NULL THEN 1 ELSE 0 END) AS missing_YearsWithCurrManager
 FROM employees_raw;
+
+-- Check for duplicate rows in the raw dataset
+SELECT COUNT(*) AS total_duplicate_records
+FROM (
+    SELECT *
+    FROM employees_raw
+    GROUP BY
+        Age, Attrition, BusinessTravel, DailyRate, Department,
+        DistanceFromHome, Education, EducationField, EmployeeCount,
+        EmployeeNumber, EnvironmentSatisfaction, Gender, HourlyRate,
+        JobInvolvement, JobLevel, JobRole, JobSatisfaction,
+        MaritalStatus, MonthlyIncome, MonthlyRate, NumCompaniesWorked,
+        Over18, OverTime, PercentSalaryHike, PerformanceRating,
+        RelationshipSatisfaction, StandardHours, StockOptionLevel,
+        TotalWorkingYears, TrainingTimesLastYear, WorkLifeBalance,
+        YearsAtCompany, YearsInCurrentRole, YearsSinceLastPromotion,
+        YearsWithCurrManager
+    HAVING COUNT(*) > 1
+) AS duplicate_records;
