@@ -15,41 +15,6 @@ LIMIT 10;
 ALTER TABLE employees_raw
 RENAME COLUMN `ï»¿Age` TO Age;
 
-SELECT DISTINCT Attrition
-FROM employees_raw;
-
-SELECT DISTINCT Department
-FROM employees_raw;
-
-SELECT DISTINCT Gender
-FROM employees_raw;
-
-SELECT DISTINCT JobRole
-FROM employees_raw
-ORDER BY JobRole;
-
-SELECT DISTINCT BusinessTravel
-FROM employees_raw
-ORDER BY BusinessTravel;
-
-SELECT DISTINCT EducationField
-FROM employees_raw
-ORDER BY EducationField;
-
-SELECT DISTINCT MaritalStatus
-FROM employees_raw
-ORDER BY MaritalStatus;
-
-SELECT DISTINCT OverTime
-FROM employees_raw
-ORDER BY OverTime;
-
-SELECT DISTINCT Over18
-FROM employees_raw;
-
-SELECT DISTINCT Education
-FROM employees_raw
-ORDER BY Education;
 
 SELECT
     MIN(EnvironmentSatisfaction) AS min_environment_satisfaction,
