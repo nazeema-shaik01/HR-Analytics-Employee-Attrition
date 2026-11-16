@@ -86,7 +86,7 @@ SELECT
 FROM employees_raw;
 
 -- Check for duplicate rows in the raw dataset
-SELECT COUNT(*) AS total_duplicate_records
+SELECT COUNT(*) AS duplicate_groups
 FROM (
     SELECT *
     FROM employees_raw
@@ -233,8 +233,8 @@ SELECT DISTINCT
 FROM employees_raw;
 
 
--- View all values in columns excluded from the cleaned table
-SELECT 
+-- Check unique values in columns excluded from the cleaned table
+SELECT DISTINCT
     EmployeeCount,
     Over18,
     StandardHours
