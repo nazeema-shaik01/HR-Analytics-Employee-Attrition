@@ -160,3 +160,52 @@ FROM employees_raw;
 SELECT DISTINCT Education
 FROM employees_raw
 ORDER BY Education;
+
+-- Check minimum and maximum values in numeric columns
+SELECT
+    MIN(EnvironmentSatisfaction) AS min_environment_satisfaction,
+    MAX(EnvironmentSatisfaction) AS max_environment_satisfaction,
+
+    MIN(JobInvolvement) AS min_job_involvement,
+    MAX(JobInvolvement) AS max_job_involvement,
+
+    MIN(JobLevel) AS min_job_level,
+    MAX(JobLevel) AS max_job_level,
+
+    MIN(JobSatisfaction) AS min_job_satisfaction,
+    MAX(JobSatisfaction) AS max_job_satisfaction,
+
+    MIN(PerformanceRating) AS min_performance_rating,
+    MAX(PerformanceRating) AS max_performance_rating,
+
+    MIN(RelationshipSatisfaction) AS min_relationship_satisfaction,
+    MAX(RelationshipSatisfaction) AS max_relationship_satisfaction,
+
+    MIN(WorkLifeBalance) AS min_work_life_balance,
+    MAX(WorkLifeBalance) AS max_work_life_balance,
+
+    MIN(StockOptionLevel) AS min_stock_option_level,
+    MAX(StockOptionLevel) AS max_stock_option_level,
+
+    MIN(YearsAtCompany) AS min_years_at_company,
+    MAX(YearsAtCompany) AS max_years_at_company,
+
+    MIN(TotalWorkingYears) AS min_total_working_years,
+    MAX(TotalWorkingYears) AS max_total_working_years,
+
+    MIN(TrainingTimesLastYear) AS min_training,
+    MAX(TrainingTimesLastYear) AS max_training,
+
+    MIN(YearsInCurrentRole) AS min_current_role,
+    MAX(YearsInCurrentRole) AS max_current_role,
+
+    MIN(YearsSinceLastPromotion) AS min_since_promotion,
+    MAX(YearsSinceLastPromotion) AS max_since_promotion,
+
+    MIN(YearsWithCurrManager) AS min_with_manager,
+    MAX(YearsWithCurrManager) AS max_with_manager,
+
+    MIN(NumCompaniesWorked) AS min_companies_worked,
+    MAX(NumCompaniesWorked) AS max_companies_worked
+FROM employees_raw;
+
