@@ -15,10 +15,6 @@ LIMIT 10;
 ALTER TABLE employees_raw
 RENAME COLUMN `ï»¿Age` TO Age;
 
-SELECT COUNT(*) AS missing_job_role
-FROM employees_raw
-WHERE JobRole IS NULL;
-
 SELECT
     SUM(CASE WHEN Age IS NULL THEN 1 ELSE 0 END) AS missing_Age,
     SUM(CASE WHEN Attrition IS NULL THEN 1 ELSE 0 END) AS missing_Attrition,
