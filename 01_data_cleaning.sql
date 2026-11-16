@@ -198,6 +198,44 @@ SELECT
     COUNT(DISTINCT StandardHours) AS standard_hours_values
 FROM employees_raw;
 
+CREATE TABLE employees AS
+SELECT
+    Age,
+    Attrition,
+    BusinessTravel,
+    DailyRate,
+    Department,
+    DistanceFromHome,
+    Education,
+    EducationField,
+    EnvironmentSatisfaction,
+    Gender,
+    HourlyRate,
+    JobInvolvement,
+    JobLevel,
+    JobRole,
+    JobSatisfaction,
+    MaritalStatus,
+    MonthlyIncome,
+    MonthlyRate,
+    NumCompaniesWorked,
+    EmployeeNumber,
+    OverTime,
+    PercentSalaryHike,
+    PerformanceRating,
+    RelationshipSatisfaction,
+    StockOptionLevel,
+    TotalWorkingYears,
+    TrainingTimesLastYear,
+    WorkLifeBalance,
+    YearsAtCompany,
+    YearsInCurrentRole,
+    YearsSinceLastPromotion,
+    YearsWithCurrManager
+FROM employees_raw;
+
+ALTER TABLE employees
+ADD PRIMARY KEY (EmployeeNumber);
 SELECT DISTINCT
     EmployeeCount,
     Over18,
