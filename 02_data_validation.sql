@@ -25,6 +25,16 @@ SELECT COUNT(*) AS missing_employee_numbers
 FROM employees_raw
 WHERE EmployeeNumber IS NULL;
 
+-- Check for missing MonthlyIncome values
+SELECT COUNT(*)
+FROM employees_raw
+WHERE MonthlyIncome IS NULL;
+
+-- Check for missing Department values
+SELECT COUNT(*)
+FROM employees_raw
+WHERE Department IS NULL;
+
 -- Check for duplicate employee numbers
 SELECT EmployeeNumber, COUNT(*) AS duplicate_records
 FROM employees_raw
