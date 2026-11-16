@@ -209,3 +209,11 @@ SELECT
     MAX(NumCompaniesWorked) AS max_companies_worked
 FROM employees_raw;
 
+
+-- Check total records and unique employee numbers
+SELECT
+    COUNT(*) AS total_records,
+    COUNT(DISTINCT EmployeeNumber) AS unique_employees
+FROM employees_raw;
+
+
