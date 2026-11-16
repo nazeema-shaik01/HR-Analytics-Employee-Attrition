@@ -233,9 +233,4 @@ SELECT DISTINCT
 FROM employees_raw;
 
 
--- Check unique values in columns excluded from the cleaned table
-SELECT DISTINCT
-    EmployeeCount,
-    Over18,
-    StandardHours
-FROM employees_raw;
+
