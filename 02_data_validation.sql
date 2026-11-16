@@ -40,3 +40,8 @@ SELECT EmployeeNumber, COUNT(*) AS duplicate_records
 FROM employees_raw
 GROUP BY EmployeeNumber
 HAVING COUNT(*) > 1; 
+
+-- Check for missing JobRole values
+SELECT COUNT(*) AS missing_job_role
+FROM employees_raw
+WHERE JobRole IS NULL;
