@@ -103,3 +103,14 @@ FROM (
         YearsWithCurrManager
     HAVING COUNT(*) > 1
 ) AS duplicate_records;
+
+
+-- Check for employees with invalid age values
+SELECT EmployeeNumber, Age
+FROM employees_raw
+WHERE Age < 18 OR Age > 60; 
+
+-- Check for employees with invalid monthly income values
+SELECT EmployeeNumber, MonthlyIncome
+FROM employees_raw
+WHERE MonthlyIncome <= 0;
