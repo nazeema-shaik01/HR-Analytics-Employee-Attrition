@@ -25,14 +25,6 @@ FROM employees_raw
 GROUP BY EmployeeNumber
 HAVING COUNT(*) > 1; 
 
-SELECT COUNT(*)
-FROM employees_raw
-WHERE MonthlyIncome IS NULL; 
-
-SELECT COUNT(*)
-FROM employees_raw
-WHERE Department IS NULL; 
-
 SELECT COUNT(*) AS missing_job_role
 FROM employees_raw
 WHERE JobRole IS NULL;
