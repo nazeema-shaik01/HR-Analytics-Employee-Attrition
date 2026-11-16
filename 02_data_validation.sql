@@ -114,3 +114,49 @@ WHERE Age < 18 OR Age > 60;
 SELECT EmployeeNumber, MonthlyIncome
 FROM employees_raw
 WHERE MonthlyIncome <= 0;
+
+-- Check distinct values in Attrition
+SELECT DISTINCT Attrition
+FROM employees_raw;
+
+-- Check distinct values in Department
+SELECT DISTINCT Department
+FROM employees_raw;
+
+-- Check distinct values in Gender
+SELECT DISTINCT Gender
+FROM employees_raw;
+
+-- Check distinct values in JobRole
+SELECT DISTINCT JobRole
+FROM employees_raw
+ORDER BY JobRole;
+
+-- Check distinct values in BusinessTravel
+SELECT DISTINCT BusinessTravel
+FROM employees_raw
+ORDER BY BusinessTravel;
+
+-- Check distinct values in EducationField
+SELECT DISTINCT EducationField
+FROM employees_raw
+ORDER BY EducationField;
+
+-- Check distinct values in MaritalStatus
+SELECT DISTINCT MaritalStatus
+FROM employees_raw
+ORDER BY MaritalStatus;
+
+-- Check distinct values in OverTime
+SELECT DISTINCT OverTime
+FROM employees_raw
+ORDER BY OverTime;
+
+-- Check distinct values in Over18
+SELECT DISTINCT Over18
+FROM employees_raw;
+
+-- Check distinct values in Education
+SELECT DISTINCT Education
+FROM employees_raw
+ORDER BY Education;
