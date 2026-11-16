@@ -19,3 +19,14 @@ WHERE Attrition = 'Yes';
 SELECT COUNT(*) AS employees_stayed
 FROM employees
 WHERE Attrition = 'No';
+
+-- Check for missing employee numbers
+SELECT COUNT(*) AS missing_employee_numbers
+FROM employees_raw
+WHERE EmployeeNumber IS NULL;
+
+-- Check for duplicate employee numbers
+SELECT EmployeeNumber, COUNT(*) AS duplicate_records
+FROM employees_raw
+GROUP BY EmployeeNumber
+HAVING COUNT(*) > 1; 
