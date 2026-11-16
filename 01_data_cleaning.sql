@@ -15,12 +15,6 @@ LIMIT 10;
 ALTER TABLE employees_raw
 RENAME COLUMN `ï»¿Age` TO Age;
 
-
-SELECT
-    COUNT(*) AS total_records,
-    COUNT(DISTINCT EmployeeNumber) AS unique_employees
-FROM employees_raw;
-
 SELECT
     COUNT(DISTINCT EmployeeCount) AS employee_count_values,
     COUNT(DISTINCT Over18) AS over18_values,
