@@ -15,24 +15,6 @@ LIMIT 10;
 ALTER TABLE employees_raw
 RENAME COLUMN `ï»¿Age` TO Age;
 
-SELECT COUNT(*) AS total_duplicate_records
-FROM (
-    SELECT *
-    FROM employees_raw
-    GROUP BY
-        Age, Attrition, BusinessTravel, DailyRate, Department,
-        DistanceFromHome, Education, EducationField, EmployeeCount,
-        EmployeeNumber, EnvironmentSatisfaction, Gender, HourlyRate,
-        JobInvolvement, JobLevel, JobRole, JobSatisfaction,
-        MaritalStatus, MonthlyIncome, MonthlyRate, NumCompaniesWorked,
-        Over18, OverTime, PercentSalaryHike, PerformanceRating,
-        RelationshipSatisfaction, StandardHours, StockOptionLevel,
-        TotalWorkingYears, TrainingTimesLastYear, WorkLifeBalance,
-        YearsAtCompany, YearsInCurrentRole, YearsSinceLastPromotion,
-        YearsWithCurrManager
-    HAVING COUNT(*) > 1
-) AS duplicate_records;
-
 
 SELECT EmployeeNumber, Age
 FROM employees_raw
