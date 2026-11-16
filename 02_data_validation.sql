@@ -217,3 +217,10 @@ SELECT
 FROM employees_raw;
 
 
+-- Check distinct counts in columns excluded from the cleaned table
+SELECT
+    COUNT(DISTINCT EmployeeCount) AS employee_count_values,
+    COUNT(DISTINCT Over18) AS over18_values,
+    COUNT(DISTINCT StandardHours) AS standard_hours_values
+FROM employees_raw;
+
