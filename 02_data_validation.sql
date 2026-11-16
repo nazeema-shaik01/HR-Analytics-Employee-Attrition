@@ -224,3 +224,18 @@ SELECT
     COUNT(DISTINCT StandardHours) AS standard_hours_values
 FROM employees_raw;
 
+
+-- Check unique values in columns excluded from the cleaned table
+SELECT DISTINCT
+    EmployeeCount,
+    Over18,
+    StandardHours
+FROM employees_raw;
+
+
+-- View all values in columns excluded from the cleaned table
+SELECT 
+    EmployeeCount,
+    Over18,
+    StandardHours
+FROM employees_raw;
