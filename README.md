@@ -1,101 +1,104 @@
-HR Analytics – Employee Attrition Analysis
+# HR Analytics – Employee Attrition Analysis
 
-1. Project Overview
+## Project Overview
 
-This project analyses employee attrition using MySQL. The goal is to identify patterns in employee turnover, understand which employee groups have higher attrition rates, and provide recommendations to improve employee retention.
+This project focuses on analysing employee attrition using MySQL. The objective is to explore employee data, identify patterns in workforce turnover, and understand which employee groups have higher attrition rates.
 
-2. Business Problem
+The analysis uses SQL queries to extract meaningful insights and provide data-driven recommendations that can help HR teams improve employee retention.
 
-The company wants to understand why employees are leaving and identify departments, job roles, and employee groups with higher attrition rates.
+## Business Problem
 
-This analysis helps HR teams identify retention challenges and make data-driven workforce decisions.
+Employee attrition can create challenges for organisations, including increased recruitment costs, loss of experienced employees, and workforce planning difficulties.
 
-3. Dataset Information
+The objective of this project is to analyse employee data and identify departments, job roles, and employee characteristics associated with higher attrition rates.
 
--Dataset: IBM HR Analytics Employee Attrition & Performance
--Total Records: 1,470 employees
--Database: hr_analytics
--Table: employees
--Tool: MySQL Workbench
+## Dataset Information
 
-4. Data Cleaning and Validation
+- Dataset: IBM HR Analytics Employee Attrition & Performance
+- Total Records: 1,470
+- Database: MySQL
+- Table: employees
+- Tool: MySQL Workbench
 
-The following steps were performed:
+## Tools and Technologies
 
-- Imported the CSV dataset into MySQL.
-- Corrected column formatting.
-- Checked for missing and NULL values.
-- Checked for duplicate records.
-- Removed unnecessary columns: EmployeeCount, Over18, and StandardHours.
-- Created and verified the cleaned employees table.
-- Confirmed that the final table contains 1,470 records.
+- MySQL
+- MySQL Workbench
+- SQL
 
-5. SQL Concepts Used
+## Data Cleaning and Preparation
 
-- SELECT, WHERE and ORDER BY
-- GROUP BY and HAVING
-- Aggregate functions: COUNT, SUM, AVG, MIN and MAX
-- CASE statements and conditional aggregation
-- DISTINCT
-- ROUND
-- Subqueries
-- Correlated subqueries
-- Filtering and grouping data
+The dataset was prepared before performing the analysis.
 
-6. Business Analysis Performed
+Key activities included:
 
-The project includes 37 SQL analyses covering:
+- Importing the CSV dataset into MySQL.
+- Correcting column formatting.
+- Checking missing and NULL values.
+- Identifying duplicate records.
+- Removing unnecessary columns such as EmployeeCount, Over18, and StandardHours.
+- Creating and validating the cleaned employees table.
+- Verifying the final record count of 1,470 employees.
 
-- Overall employee attrition
-- Department-wise attrition
-- Job role analysis
-- Gender and age group analysis
-- Salary comparisons
-- Overtime and business travel
-- Job satisfaction and work-life balance
-- Environment satisfaction
-- Years of experience and years at the company
-- Distance from home
-- Job level and employee involvement
-- Combined-factor analysis
-- Salary comparisons using subqueries
+## SQL Analysis
 
-7. Key Findings
+A total of 37 SQL analyses were performed to investigate different aspects of employee attrition.
 
-| Analysis | Finding |
+Key analysis areas included:
+
+- Overall employee attrition rate.
+- Department-wise attrition.
+- Job role and employee demographics.
+- Salary analysis and comparisons.
+- Overtime and business travel.
+- Job satisfaction and work-life balance.
+- Environment satisfaction.
+- Employee experience and tenure.
+- Distance from home.
+- Job level and employee involvement.
+- Combined-factor analysis.
+- Subqueries and correlated subqueries.
+
+## Key Findings
+
+| Business Metric | Result |
 |---|---:|
-| Total employees | 1,470 |
-| Employees who left | 237 |
-| Overall attrition rate | 16.12% |
-| Sales department attrition | 20.63% |
-| Sales Representative attrition | 39.76% |
-| Overtime employees' attrition | 30.53% |
-| Non-overtime employees' attrition | 10.44% |
-| Employees under 25 attrition | 39.18% |
-| Employees with 0–2 years of experience attrition | 43.90% |
+| Total Employees | 1,470 |
+| Employees Who Left | 237 |
+| Overall Attrition Rate | 16.12% |
+| Sales Department Attrition | 20.63% |
+| Sales Representative Attrition | 39.76% |
+| Overtime Employees Attrition | 30.53% |
+| Non-Overtime Employees Attrition | 10.44% |
+| Employees Under 25 Attrition | 39.18% |
+| Employees with 0–2 Years Experience Attrition | 43.90% |
 
-8. Business Problems and Recommendations
+## Business Insights and Recommendations
 
-Based on the analysis, the following areas require attention:
+1. Employee Retention: Entry-level employees show higher attrition. Improve onboarding, mentoring and career development.
 
-1. Entry-level employee retention: Improve onboarding, mentoring and career development.
-2. Sales department attrition: Review sales targets, incentives and workload.
-3. Overtime-related attrition: Monitor overtime and distribute workloads effectively.
-4. Employee satisfaction: Improve workplace conditions and work-life balance.
-5. Career development:Review promotion opportunities and employee training.
+2. Sales Department: Sales has a higher attrition rate than other departments. Review sales targets, incentives and workload.
 
-9. Project Files
+3. Overtime: Employees working overtime have a higher attrition rate. Review workload distribution and overtime practices.
 
-- 01_data_cleaning.sql` – Data cleaning queries.
-- 02_data_validation.sql` – Data validation queries.
-- 03_business_analysis.sql` – Business analysis queries.
-- 04_business_problems_and_recommendations.md` – Business problems and recommendations.
-- `README.md` – Project documentation.
+4. Employee Satisfaction: Lower satisfaction groups show higher attrition. Improve employee engagement and workplace support.
 
-10. Conclusion
+5. Career Development: Review promotion opportunities and provide training to support employee growth.
 
-This project demonstrates how MySQL can be used to clean, validate and analyse HR data to identify employee attrition patterns.
+## Project Structure
 
-The findings provide useful insights for HR teams to investigate retention challenges and develop employee retention strategies.
+HR-Analytics-Employee-Attrition/
 
-Note: The analysis identifies associations and patterns in the available dataset. It does not prove that any particular factor directly causes employee attrition.
+- 01_data_cleaning.sql
+- 02_data_validation.sql
+- 03_business_analysis.sql
+- 04_business_problems_and_recommendations.md
+- README.md
+
+## Conclusion
+
+This project demonstrates the use of MySQL for data cleaning, validation and business analysis.
+
+The analysis identified employee groups and workplace factors associated with higher attrition rates. These insights can help HR teams investigate retention challenges and make informed workforce decisions.
+
+Note: The findings represent associations in the available dataset and do not establish direct causes of employee attrition.
