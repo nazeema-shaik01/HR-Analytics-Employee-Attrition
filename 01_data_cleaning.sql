@@ -15,15 +15,6 @@ LIMIT 10;
 ALTER TABLE employees_raw
 RENAME COLUMN `ï»¿Age` TO Age;
 
-
-SELECT EmployeeNumber, Age
-FROM employees_raw
-WHERE Age < 18 OR Age > 60; 
-
-SELECT EmployeeNumber, MonthlyIncome
-FROM employees_raw
-WHERE MonthlyIncome <= 0;
-
 SELECT DISTINCT Attrition
 FROM employees_raw;
 
