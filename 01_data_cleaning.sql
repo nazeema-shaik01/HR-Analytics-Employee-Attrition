@@ -54,14 +54,5 @@ FROM employees_raw;
 
 ALTER TABLE employees
 ADD PRIMARY KEY (EmployeeNumber);
-SELECT DISTINCT
-    EmployeeCount,
-    Over18,
-    StandardHours
-FROM employees_raw;
 
-SELECT 
-    EmployeeCount,
-    Over18,
-    StandardHours
-FROM employees_raw;
+
