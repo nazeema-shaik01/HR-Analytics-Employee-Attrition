@@ -41,7 +41,7 @@ SELECT
     MonthlyIncome,
     MonthlyRate,
     NumCompaniesWorked,
-    EmployeeNumber,
+    EmployeeNumber, 
     OverTime,
     PercentSalaryHike,
     PerformanceRating,
