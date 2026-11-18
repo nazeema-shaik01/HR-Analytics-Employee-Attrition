@@ -1,3 +1,5 @@
+-- 1. Basic Employee Analysis
+
 SELECT Department, COUNT(*) AS Total_employees
 FROM employees
 GROUP BY Department; 
