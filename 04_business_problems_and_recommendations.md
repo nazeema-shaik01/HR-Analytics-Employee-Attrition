@@ -20,7 +20,7 @@ Problem 1: High Attrition Among Entry-Level Employees
 
 Key findings:
 
-\- Job Level 1 employees working overtime: 52.56% attrition.
+\- Employees at Job Level 1 who work overtime: 52.56% attrition.
 
 \- Employees with 0–2 years of total work experience: 43.90%.
 
@@ -59,6 +59,8 @@ Key findings:
 \- Sales Representative attrition: 39.76%.
 
 \- Research and Development attrition: 13.84%.
+
+\- Human Resources department attrition: 19.05%.
 
 
 
