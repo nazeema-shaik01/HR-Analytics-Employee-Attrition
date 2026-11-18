@@ -42,7 +42,7 @@ Key activities included:
 
 ## SQL Analysis
 
-A total of 37 SQL analyses were performed to investigate different aspects of employee attrition.
+A total of 37 SQL queries were written and executed to investigate different aspects of employee attrition.
 
 Key analysis areas included:
 
@@ -72,6 +72,7 @@ Key analysis areas included:
 | Non-Overtime Employees Attrition | 10.44% |
 | Employees Under 25 Attrition | 39.18% |
 | Employees with 0–2 Years Experience Attrition | 43.90% |
+| HR Department Attrition | 19.05% |
 
 ## Business Insights and Recommendations
 
