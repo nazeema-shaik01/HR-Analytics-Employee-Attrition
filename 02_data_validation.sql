@@ -4,7 +4,7 @@ DESCRIBE employees;
 -- View sample employee records
 SELECT *
 FROM employees
-LIMIT 10;
+LIMIT 10; 
 
 -- Check total number of records
 SELECT COUNT(*) AS total_records
